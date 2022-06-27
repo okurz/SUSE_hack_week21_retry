@@ -24,6 +24,8 @@ SUCCESS
 
 [![asciicast](https://asciinema.org/a/qoD8FL5QLBeevojHO4yPxm7qa.svg)](https://asciinema.org/a/qoD8FL5QLBeevojHO4yPxm7qa)
 
+One use: [openQA-in-openQA](https://github.com/os-autoinst/os-autoinst-distri-openQA/pull/92/files)
+
 ---
 
 ### The end … Questions? Corrections? Additions?
