@@ -1,4 +1,4 @@
-# openSUSE Conference 2022 - SUSE QE Tools - Who we are and what we do
+# SUSE Hack Week 21 - A generic "retry" command
 
 This repository uses a presentation template for
 [reveal.js](https://github.com/hakimel/reveal.js) with a theme based
