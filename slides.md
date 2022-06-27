@@ -1,65 +1,28 @@
-## Scope
-* What is the SUSE QE Tools team
-* Who we are
-* What's in our responsibility
-* How we work
+## Motivation
+Sometimes stuff fails, especially when network is involved -> just retry
 
-Note:
-This talk will give an overview of who is the SUSE QE Tools team, what is in
-our responsibility, what we did in the past time and what we do. The products
-that we care about will be presented and the workflows of the team will be
-shown. Opportunities for contributions will be discussed.
+## Goals
+* **G1:** A "retry" command is submitted to openSUSE:Factory as part of a package
 
----
-
-## Who we are
-
-"The easiest way to provide complete quality for your software"
-
-https://progress.opensuse.org/projects/qa/wiki/Tools
-
-* Team of 8 SUSE employees
-* Engaged in various communities
-* Inter-departement team, different backgrounds
+## Execution
+* Research existing approaches and distributions
+* Package existing solution or develop alternative on your own
+* Submit package to a devel repository and then openSUSE:Factory and work on feedback
 
 ---
 
-## What's in our responsibility
+## Results
 
-https://progress.opensuse.org/projects/qa/wiki/Tools#Team-responsibilities
+```
+$ sporadic_failure
+This failed!
+$ zypper -n in retry && retry sporadic_failure
+This failed!
+Retrying up to 3 more times after sleeping 3s …
+SUCCESS
+```
 
-* Develop and maintain QE related tooling, mostly used for SLE/openSUSE
-  distributions
-* Administration of related infrastructure
-* *Not:* Doing QA ourselves (mostly)
-
----
-
-### Our userbase
-
-* SUSE QA engineers and SUSE SLE release management
-* Every SLE/openSUSE developer
-* [openSUSE](https://openqa.opensuse.org), [Fedora](https://openqa.fedoraproject.org/), [Debian](https://openqa.debian.net/), [Qubes OS](https://openqa.qubes-os.org/) , [GNOME](https://openqa.gnome.org), [and](https://www.codethink.co.uk/articles/2021/automated-linux-kernel-testing/), [many](https://en.euro-linux.com/blog/openqa-or-how-we-test-eurolinux/), [more](https://openqa.opensuse.org/group_overview/23 )
-* and of course our team itself for [openQA-in-openQA Tests](https://openqa.opensuse.org/group_overview/24) ;)
-
----
-
-## How we work
-
-https://progress.opensuse.org/projects/qa/wiki/Tools#How-we-work
-
-* We follow a DevOps Process
-* Various public github projects (and some internal)
-* Continuous deployment (nearly) everywhere!
-* Appreciating contributions, helping others, helping us
-
----
-
-## Points to take away
-
-* We provide tools and infrastructure
-* openSUSE tests are done by you! … and some SUSE teams
-* We are there to help and welcome contributions :)
+[![asciicast](https://asciinema.org/a/qoD8FL5QLBeevojHO4yPxm7qa.svg)](https://asciinema.org/a/qoD8FL5QLBeevojHO4yPxm7qa)
 
 ---
 
@@ -67,7 +30,7 @@ https://progress.opensuse.org/projects/qa/wiki/Tools#How-we-work
 
 <p><img src="img/chameleon.svg" style="max-height:300px;"></p>
 
-https://v.gd/okurz_osc22
+https://v.gd/okurz_retry
 
 <small>
 Presentation created using <br><a href="https://github.com/krig/opensuse-presentation-template">https://github.com/krig/opensuse-presentation-template</a>
